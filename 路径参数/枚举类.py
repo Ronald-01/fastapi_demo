@@ -8,5 +8,5 @@ app=FastAPI()
 
 @app.get("/models/{name}")
 async  def get_model(name:ModelName):
-    if name==ModelName.cp:
+    if name.value==ModelName.cp:
         return {"model_name":name,"message":"44"}
